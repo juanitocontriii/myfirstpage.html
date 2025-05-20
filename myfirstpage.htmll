@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My first page</h1>
+        <nav>
+            <a href="#">Principal</a>
+            <a href="#">Challenge</a>
+            <a href="#">Help us</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Welcome to my first page</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisquam, tempora impedit suscipit numquam nostrum.</p>
+        <button>Visit the database</button>
+        <button>Meet Juan</button>
+    </section>
+
+    <section class="database">
+        <h2>Our Programming database</h2>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Flowchart">
+            <h3>Employees salary problem</h3>
+            <p>
+                If an employee needs to calculate his weekly salary. You can obtain this salary by calculating:
+                <br>If he works 40 hours or less, he will earn $15 per hour.
+                <br>If he works more than 40: $15/hour first 40 hours, then $20/hour if it isextra.
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Flowchart">
+            <h3>Restaurant consumption problem</h3>
+            <p>
+                A restaurant offers 10% discount if client consumes up to $100. 20% if higher. Tax: 12%. 
+                <br>Build a flowchart that calculates discount, tax, and total price.
+            </p>
+        </div>
+    </section>
+
+    <section class="challenge">
+        <h2>Another challenge</h2>
+        <p>Type a random number between 0 and 100. Which is the correct answer?</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <button onclick="checkGuess()">Guess it</button>
+        <p id="resultMessage"></p>
+    </section>
+
+    <section class="crew">
+        <h2>Meet Juan</h2>
+        <div class="member">
+            <h3>Juan Contreras</h3>
+            <p><strong>Student</strong><br>I am the ceo of this page jaja</p>
+        </div>
+    </section>
+
+    <section class="contribute">
+        <h2>Help with the project</h2>
+        <input type="text" placeholder="Describe your idea here...">
+        <button>More information here</button>
+    </section>
+
+    <section class="subscribe">
+        <h2>Are you searching anything else?</h2>
+        <p>Type your email</p>
+        <input type="email" id="emailInput" placeholder="anyexample@mail.com">
+        <button onclick="subscribe()">Send</button>
+        <p id="subscribeMsg"></p>
+    </section>
+
+    <footer>
+        <p>My first page 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+// Random number
+const secretNumber = Math.floor(Math.random() * 101);
+
+function checkGuess() {
+    const input = document.getElementById("guessInput").value;
+    const result = document.getElementById("resultMessage");
+
+    if (input == secretNumber) {
+        result.textContent = "yes it was the number";
+    } else if (input > secretNumber) {
+        result.textContent = "too high.";
+    } else {
+        result.textContent = "too low.";
+    }
+}
+
+// Email subscribe
+function subscribe() {
+    const email = document.getElementById("emailInput").value;
+    const message = document.getElementById("subscribeMsg");
+
+    if (email.includes("@")) {
+        message.textContent = "receive daily info";
+    } else {
+        message.textContent = "Please enter a valid email address.";
+    }
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f5e9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.intro,
+.database,
+.crew,
+.challenge,
+.contribute,
+.subscribe {
+    background-color: #15481e;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: rgb(252, 236, 7);
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(149, 200, 20);
+}
+
+.card {
+    background-color: #f5f5f5;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.challenge {
+    background-color: #12e012;
+}
+
+.member {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

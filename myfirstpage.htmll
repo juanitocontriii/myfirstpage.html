@@ -27,7 +27,7 @@
     <section class="database">
         <h2>Our Programming database</h2>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Flowchart">
+            <img src="blob:https://web.whatsapp.com/1e53185b-9a15-4827-96f0-25c1fd7977e0" alt="Flowchart">
             <h3>Employees salary problem</h3>
             <p>
                 If an employee needs to calculate his weekly salary. You can obtain this salary by calculating:
@@ -36,10 +36,10 @@
             </p>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Flowchart">
-            <h3>Restaurant consumption problem</h3>
+            <img src="blob:https://web.whatsapp.com/3f250e6e-a458-497e-9e1d-4a4abcaaa198" alt="Flowchart">
+            <h3>shop consumption</h3>
             <p>
-                A restaurant offers 10% discount if client consumes up to $100. 20% if higher. Tax: 12%. 
+                A shop offers a 10% discount if client consumes up to $80. 20% if higher. Tax: 12%. 
                 <br>Build a flowchart that calculates discount, tax, and total price.
             </p>
         </div>

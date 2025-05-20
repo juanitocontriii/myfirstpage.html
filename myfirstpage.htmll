@@ -63,14 +63,14 @@
 
     <section class="contribute">
         <h2>Help with the project</h2>
-        <input type="text" placeholder="Describe your idea here...">
+        <input type="text" placeholder="recomendations">
         <button>More information here</button>
     </section>
 
     <section class="subscribe">
         <h2>Are you searching anything else?</h2>
         <p>Type your email</p>
-        <input type="email" id="emailInput" placeholder="anyexample@mail.com">
+        <input type="email" id="emailInput" placeholder="example@mail.com">
         <button onclick="subscribe()">Send</button>
         <p id="subscribeMsg"></p>
     </section>
